@@ -304,6 +304,13 @@ h3 { font-size: 1.05rem; letter-spacing: -0.01em; }
 .card-serv p { font-size: 12.6px; line-height: 1.5; color: var(--txt-mudo); margin-bottom: 16px; flex: 1; }
 .card-serv .btn { align-self: flex-start; }
 
+/* dois botoes lado a lado (ou empilhados) sem colar um no outro */
+.acoes { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* o card de servico e estreito (5 numa linha): o botao tem que caber nele */
+.card-serv .btn--sm { padding: 10px 12px; font-size: 10.5px; letter-spacing: 0.04em; }
+.card-serv .acoes { flex-direction: column; align-items: flex-start; align-self: flex-start; }
+
 /* ------------------------------------------------------------- marcas --- */
 
 .marcas { background: var(--branco); padding: 34px 0; }

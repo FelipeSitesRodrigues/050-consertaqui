@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Consertaqui Suzano: páginas de serviço (landing pages de campanha)
+   Carrega depois do style.css e só acrescenta o que a home não tem.
+   ========================================================================== */
+
+/* ------------------------------------------------------------ migalha --- */
+
+.mig { display: flex; align-items: center; gap: 8px; font-size: 12.4px; color: var(--txt-mudo); margin-bottom: 20px; }
+.mig svg { width: 12px; height: 12px; flex: none; opacity: 0.6; }
+.mig a { transition: color 0.2s; }
+.mig a:hover { color: var(--verde); }
+.mig span { color: #6e766e; }
+
+/* ------------------------------------------------------------- hero ----- */
+
+.hero--lp { padding: 132px 0 64px; }
+.hero--lp .hero__grid { min-height: 440px; }
+.hero--lp h1 { font-size: clamp(1.95rem, 3.9vw, 3.15rem); }
+
+.hero__nota { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 24px; }
+.hero__nota li { display: flex; align-items: center; gap: 8px; font-size: 12.7px; color: var(--txt-mudo); }
+.hero__nota svg { width: 15px; height: 15px; color: var(--verde); flex: none; stroke-width: 2; }
+
+/* --------------------------------------------------------- as dores ----- */
+
+.dores__head { max-width: 640px; margin-bottom: 32px; }
+.dores__head h2 { margin-bottom: 10px; font-size: clamp(1.75rem, 2.7vw, 2.4rem); }
+.dores__head p { color: var(--txt-esc-mudo); font-size: 0.96rem; }
+
+.dores__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 13px; }
+
+.dor {
+  display: flex; flex-direction: column; gap: 9px;
+  padding: 22px 20px 18px;
+  background: var(--branco);
+  border: 1px solid rgba(11, 15, 12, 0.09);
+  border-radius: var(--r);
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.dor:hover { transform: translateY(-5px); border-color: var(--linha-verde); box-shadow: 0 18px 36px -22px rgba(11, 15, 12, 0.42); }
+.dor__ico { width: 31px; height: 31px; color: var(--verde); stroke-width: 1.5; }
+.dor b { font-family: var(--display); font-size: 0.95rem; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; color: var(--txt-esc); }
+.dor p { font-size: 12.9px; line-height: 1.55; color: var(--txt-esc-mudo); flex: 1; }
+.dor__cta { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--verde-2); margin-top: 2px; }
+.dor__cta svg { width: 13px; height: 13px; transition: transform 0.3s var(--ease); }
+.dor:hover .dor__cta svg { transform: translateX(4px); }
+
+/* ---------------------------------------------------- faixa de reforço -- */
+
+.faixa { background: linear-gradient(100deg, var(--verde-2) 0%, var(--verde) 58%, var(--verde-3) 100%); color: #04180a; }
+/* padding-block só: `padding` cheio aqui zeraria o recuo lateral do .wrap */
+.faixa__in { display: flex; align-items: center; gap: 18px 30px; padding-block: 30px; flex-wrap: wrap; }
+.faixa__txt { flex: 1; min-width: 260px; }
+.faixa b { display: block; font-family: var(--display); font-size: clamp(1.1rem, 1.9vw, 1.5rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.015em; text-transform: uppercase; }
+.faixa p { font-size: 13.6px; opacity: 0.82; margin-top: 5px; }
+.faixa .btn--dark { flex: none; }
+
+/* ------------------------------------------------ o que a gente faz ----- */
+
+.sols__head { max-width: 620px; margin-bottom: 30px; }
+.sols__head h2 { margin-bottom: 12px; }
+
+.sols__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
+
+.sol {
+  display: flex; flex-direction: column; gap: 11px;
+  padding: 24px 22px 22px;
+  background: var(--card);
+  border: 1px solid var(--linha);
+  border-radius: var(--r);
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.sol:hover { transform: translateY(-5px); border-color: var(--linha-verde); box-shadow: 0 20px 40px -24px rgba(76, 184, 44, 0.6); }
+.sol__ico { width: 30px; height: 30px; color: var(--verde); stroke-width: 1.5; }
+.sol h3 { font-size: 0.98rem; letter-spacing: -0.015em; }
+.sol p { font-size: 13.1px; line-height: 1.55; color: var(--txt-mudo); flex: 1; }
+.sol__acoes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 3px; }
+
+.sols__fecho { display: flex; align-items: center; gap: 16px 24px; flex-wrap: wrap; margin-top: 22px; padding: 22px 24px; border: 1px dashed var(--linha-verde); border-radius: var(--r); }
+.sols__fecho p { font-size: 14px; color: var(--txt-mudo); flex: 1; min-width: 240px; }
+.sols__fecho b { color: #fff; }
+
+/* --------------------------------------------------- marcas em texto --- */
+
+.pills { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+.pills li {
+  padding: 8px 15px; border-radius: 999px;
+  border: 1px solid rgba(11, 15, 12, 0.14);
+  font-size: 12.6px; font-weight: 600; color: var(--txt-esc);
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+.pills li:hover { border-color: var(--verde); transform: translateY(-2px); }
+.pills li:last-child { border-style: dashed; color: var(--txt-esc-mudo); }
+
+/* ------------------------------------- depoimentos sobre fundo branco --- */
+
+.sec--white.dep .card-dep { background: var(--claro); border-color: rgba(11, 15, 12, 0.1); }
+.sec--white .dots button { background: rgba(11, 15, 12, 0.18); }
+.sec--white .dots button.is-on { background: var(--verde); }
+
+/* --------------------------------------------------------- volta pra / -- */
+
+.volta { background: var(--preto-2); padding: 26px 0; border-top: 1px solid var(--linha); }
+.volta__in { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.volta p { font-size: 14px; color: var(--txt-mudo); }
+.volta p b { color: #fff; }
+
+/* -------------------------------------------------------- responsivo ---- */
+
+@media (max-width: 1100px) {
+  .dores__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sols__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 860px) {
+  .dores__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero--lp { padding: 96px 0 50px; }
+  .hero--lp .hero__grid { min-height: 0; }
+  /* .hero__copy vira display:contents no mobile, então os filhos sem `order`
+     sobem pro topo do grid. A ordem obrigatória é headline, imagem,
+     subheadline, botões, e só depois os selos. */
+  .mig { order: 0; margin-bottom: 16px; }
+  .hero__nota { order: 5; }
+  .faixa__in { padding-block: 26px; }
+  .faixa .btn { width: 100%; justify-content: center; }
+  .sols__fecho { padding: 20px; }
+  .volta__in { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 620px) {
+  .dores__grid { grid-template-columns: 1fr; gap: 10px; }
+  .dor { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 18px 16px; }
+  .dor__ico { width: 26px; height: 26px; }
+  .dor b { flex: 1; min-width: 0; }
+  .dor p { flex: 0 0 100%; }
+  .dor__cta { flex: 0 0 100%; }
+  .sols__grid { grid-template-columns: 1fr; }
+  .hero__nota { gap: 8px 16px; }
+}
