@@ -46,7 +46,7 @@ body {
   overflow-x: hidden;
 }
 
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 ul { list-style: none; }
@@ -219,6 +219,7 @@ h3 { font-size: 1.05rem; letter-spacing: -0.01em; }
   margin-right: calc(-1 * (max(0px, (100vw - var(--wrap))) / 2) - 24px);
 }
 .hero__art img { width: 100%; height: auto; }
+.hero__art picture { display: contents; }
 .hero__art::after {
   content: "";
   position: absolute;
@@ -228,7 +229,7 @@ h3 { font-size: 1.05rem; letter-spacing: -0.01em; }
     linear-gradient(to bottom, var(--preto) 0%, transparent 12%, transparent 84%, var(--preto) 100%);
   pointer-events: none;
 }
-.hero__mob { display: none; }
+
 
 /* ---------------------------------------------------------- faixa selos - */
 
@@ -324,6 +325,8 @@ h3 { font-size: 1.05rem; letter-spacing: -0.01em; }
   transition: transform 0.3s var(--ease);
 }
 .marcas__list img:hover { transform: scale(1.06); }
+.marcas .btn--ghost { color: var(--txt-esc); border-color: rgba(11, 15, 12, 0.2); }
+.marcas .btn--ghost:hover { border-color: var(--verde); background: rgba(76, 184, 44, 0.08); }
 
 /* ------------------------------------------------- outras + como funciona */
 
@@ -619,22 +622,21 @@ h3 { font-size: 1.05rem; letter-spacing: -0.01em; }
   .hero { padding: 104px 0 54px; }
   .hero__copy { max-width: none; display: contents; }
   .hero h1 { order: 1; margin-bottom: 22px; }
-  .hero__mob { order: 2; display: block; margin: 0 -24px 20px; position: relative; }
-  .hero__mob img {
+  .hero__art { order: 2; display: block; margin: 0 -24px 20px; position: relative; }
+  .hero__art img {
     width: 100%;
     height: min(52vh, 400px);
     object-fit: cover;
     object-position: 50% 26%;
   }
-  .hero__mob::after {
-    content: ""; position: absolute; inset: 0;
+  .hero__art::after {
+    inset: 0;
     background:
       linear-gradient(to bottom, var(--preto) 0%, transparent 16%, transparent 62%, var(--preto) 99%);
   }
   .hero__sub { order: 3; margin-bottom: 24px; max-width: none; }
   .hero__cta { order: 4; flex-direction: column; align-items: stretch; }
   .hero__cta .btn { justify-content: center; }
-  .hero__art { display: none; }
 
   .selos__in { grid-template-columns: 1fr 1fr; gap: 20px 0; padding: 24px 0; }
   .selo { padding: 0 14px; align-items: flex-start; }

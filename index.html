@@ -14,16 +14,16 @@
 <meta property="og:title" content="Conserto de Roçadeira em Suzano | Consertaqui">
 <meta property="og:description" content="Conserto e manutenção de roçadeiras e ferramentas elétricas em Suzano e região. Orçamento sem custo e garantia em todos os serviços.">
 <meta property="og:url" content="https://www.consertaquisuzano.com.br/">
-<meta property="og:image" content="https://www.consertaquisuzano.com.br/assets/img/hero-desktop.jpg">
+<meta property="og:image" content="https://www.consertaquisuzano.com.br/assets/img/hero-desktop.webp">
 
 <link rel="icon" href="assets/img/logo.png">
 <link rel="apple-touch-icon" href="assets/img/logo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/img/hero-desktop.jpg" media="(min-width: 861px)">
-<link rel="preload" as="image" href="assets/img/hero-mobile.jpg" media="(max-width: 860px)">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/hero-desktop.webp" type="image/webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/hero-mobile.webp" type="image/webp" media="(max-width: 860px)" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -32,7 +32,7 @@
 <header class="head" id="head">
   <div class="wrap head__in">
     <a href="#topo" class="head__logo" aria-label="Consertaqui, página inicial">
-      <img src="assets/img/logo.png" alt="Consertaqui" width="160" height="30">
+      <img src="assets/img/logo.webp" alt="Consertaqui" width="160" height="30">
     </a>
 
     <nav class="nav" aria-label="Navegação principal">
@@ -63,6 +63,7 @@
       <a href="#servicos">Serviços</a>
       <a href="#marcas">Marcas</a>
       <a href="#outras">Outras Ferramentas</a>
+      <a href="conserto-de-rocadeira/">Conserto de Roçadeira</a>
       <a href="conserto-de-compressor-de-ar/">Conserto de Compressor de Ar</a>
       <a href="conserto-de-martelete-e-furadeira/">Martelete e Furadeira</a>
       <a href="ferramentas-eletricas/">Ferramentas Elétricas</a>
@@ -87,10 +88,6 @@
     <div class="hero__copy">
       <h1>Sua ferramenta<br>quebrou?<br>A gente <span class="g">conserta.</span></h1>
 
-      <div class="hero__mob">
-        <img src="assets/img/hero-mobile.jpg" alt="Mascote da Consertaqui segurando duas chaves de fenda" width="1024" height="1536" fetchpriority="high">
-      </div>
-
       <p class="hero__sub">Conserto e manutenção de roçadeiras e ferramentas elétricas com garantia, agilidade e preço justo.</p>
 
       <div class="hero__cta">
@@ -106,7 +103,10 @@
     </div>
 
     <div class="hero__art">
-      <img src="assets/img/hero-desktop.jpg" alt="Mascote da Consertaqui com duas chaves de fenda em frente à loja em Suzano" width="1536" height="1024" fetchpriority="high">
+      <picture>
+        <source srcset="assets/img/hero-mobile.webp" media="(max-width: 860px)" type="image/webp">
+        <img src="assets/img/hero-desktop.webp" alt="Mascote da Consertaqui com duas chaves de fenda em frente a loja em Suzano" width="1400" height="933" fetchpriority="high" decoding="async">
+      </picture>
     </div>
   </div>
 </section>
@@ -183,16 +183,16 @@
 
     <div class="serv__grid">
       <article class="card-serv" data-rv>
-        <div class="card-serv__img"><img src="assets/img/serv-rocadeira.png" alt="Conserto de roçadeira em Suzano" width="500" height="500" loading="lazy"></div>
+        <div class="card-serv__img"><img src="assets/img/serv-rocadeira.webp" alt="Conserto de roçadeira em Suzano" width="500" height="500" loading="lazy" decoding="async"></div>
         <div class="card-serv__body">
           <h3>Roçadeiras</h3>
           <p>Conserto completo, carburadores, embreagem, bobina, ignição e mais.</p>
-          <a class="btn btn--ghost btn--sm" data-wa="Olá! Vim pelo site e gostaria de um orçamento para conserto de *roçadeira*." href="https://wa.me/5511940119097">Pedir orçamento</a>
+          <div class="acoes"><a class="btn btn--ghost btn--sm" data-wa="Olá! Vim pelo site e gostaria de um orçamento para conserto de *roçadeira*." href="https://wa.me/5511940119097">Pedir orçamento</a><a class="btn btn--ghost btn--sm" href="conserto-de-rocadeira/">Ver a página</a></div>
         </div>
       </article>
 
       <article class="card-serv" data-rv style="--d:70ms">
-        <div class="card-serv__img"><img src="assets/img/serv-furadeira.png" alt="Conserto de furadeira e martelete em Suzano" width="500" height="500" loading="lazy"></div>
+        <div class="card-serv__img"><img src="assets/img/serv-furadeira.webp" alt="Conserto de furadeira e martelete em Suzano" width="500" height="500" loading="lazy" decoding="async"></div>
         <div class="card-serv__body">
           <h3>Furadeiras e marteletes</h3>
           <p>Reparo de motor, mandril, rolamentos, escovas, cabo e componentes.</p>
@@ -201,7 +201,7 @@
       </article>
 
       <article class="card-serv" data-rv style="--d:140ms">
-        <div class="card-serv__img"><img src="assets/img/serv-esmerilhadeira.png" alt="Conserto de esmerilhadeira em Suzano" width="500" height="500" loading="lazy"></div>
+        <div class="card-serv__img"><img src="assets/img/serv-esmerilhadeira.webp" alt="Conserto de esmerilhadeira em Suzano" width="500" height="500" loading="lazy" decoding="async"></div>
         <div class="card-serv__body">
           <h3>Esmerilhadeiras</h3>
           <p>Troca de induzido, engrenagens, rolamentos e manutenção geral.</p>
@@ -210,7 +210,7 @@
       </article>
 
       <article class="card-serv" data-rv style="--d:210ms">
-        <div class="card-serv__img"><img src="assets/img/serv-serra.png" alt="Conserto de serra elétrica em Suzano" width="500" height="500" loading="lazy"></div>
+        <div class="card-serv__img"><img src="assets/img/serv-serra.webp" alt="Conserto de serra elétrica em Suzano" width="500" height="500" loading="lazy" decoding="async"></div>
         <div class="card-serv__body">
           <h3>Serras elétricas</h3>
           <p>Ajustes, troca de escovas, rolamentos, cabos e peças de reposição.</p>
@@ -219,7 +219,7 @@
       </article>
 
       <article class="card-serv" data-rv style="--d:280ms">
-        <div class="card-serv__img"><img src="assets/img/serv-rompedor.png" alt="Conserto de rompedor e outras ferramentas em Suzano" width="500" height="500" loading="lazy"></div>
+        <div class="card-serv__img"><img src="assets/img/serv-rompedor.webp" alt="Conserto de rompedor e outras ferramentas em Suzano" width="500" height="500" loading="lazy" decoding="async"></div>
         <div class="card-serv__body">
           <h3>Rompedores e outros</h3>
           <p>Manutenção em diversas ferramentas elétricas e acessórios.</p>
@@ -238,12 +238,12 @@
       <b>Melhores marcas</b>
     </div>
     <div class="marcas__list" data-rv style="--d:80ms">
-      <img src="assets/img/marcas/stihl.png" alt="Stihl" loading="lazy">
-      <img src="assets/img/marcas/bosch.webp" alt="Bosch" loading="lazy">
-      <img src="assets/img/marcas/makita.webp" alt="Makita" loading="lazy">
-      <img src="assets/img/marcas/dewalt.png" alt="DeWalt" loading="lazy">
-      <img src="assets/img/marcas/black-decker.svg" alt="Black and Decker" loading="lazy">
-      <img src="assets/img/marcas/vonder.png" alt="Vonder" loading="lazy">
+      <img src="assets/img/marcas/stihl.webp" alt="Stihl" loading="lazy" decoding="async">
+      <img src="assets/img/marcas/bosch.webp" alt="Bosch" loading="lazy" decoding="async">
+      <img src="assets/img/marcas/makita.webp" alt="Makita" loading="lazy" decoding="async">
+      <img src="assets/img/marcas/dewalt.webp" alt="DeWalt" loading="lazy" decoding="async">
+      <img src="assets/img/marcas/black-decker.webp" alt="Black and Decker" loading="lazy" decoding="async">
+      <img src="assets/img/marcas/vonder.webp" alt="Vonder" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -257,8 +257,8 @@
         <div class="eyebrow">Outras ferramentas</div>
         <h2>A gente <span class="g">também</span> conserta.</h2>
         <div class="outras__art">
-          <img src="assets/img/serv-rompedor.png" alt="" aria-hidden="true" loading="lazy">
-          <img src="assets/img/serv-furadeira.png" alt="" aria-hidden="true" loading="lazy">
+          <img src="assets/img/serv-rompedor.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+          <img src="assets/img/serv-furadeira.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
         </div>
         <ul class="outras__list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>Aspiradores</li>
@@ -342,10 +342,10 @@
       <p>Ambiente preparado para oferecer o melhor serviço para sua ferramenta.</p>
     </div>
     <div class="of__grid">
-      <figure data-rv><img src="assets/img/oficina-01.jpg" alt="Balcão de atendimento da Consertaqui em Suzano" loading="lazy"></figure>
-      <figure data-rv style="--d:80ms"><img src="assets/img/oficina-02.jpg" alt="Interior da loja Consertaqui com peças e acessórios" loading="lazy"></figure>
-      <figure data-rv style="--d:160ms"><img src="assets/img/oficina-03.jpg" alt="Área técnica da Consertaqui com prateleiras de peças" loading="lazy"></figure>
-      <figure data-rv style="--d:240ms"><img src="assets/img/oficina-04.jpg" alt="Bancada de trabalho da oficina Consertaqui" loading="lazy"></figure>
+      <figure data-rv><img src="assets/img/oficina-01.webp" alt="Balcão de atendimento da Consertaqui em Suzano" loading="lazy" decoding="async"></figure>
+      <figure data-rv style="--d:80ms"><img src="assets/img/oficina-02.webp" alt="Interior da loja Consertaqui com peças e acessórios" loading="lazy" decoding="async"></figure>
+      <figure data-rv style="--d:160ms"><img src="assets/img/oficina-03.webp" alt="Área técnica da Consertaqui com prateleiras de peças" loading="lazy" decoding="async"></figure>
+      <figure data-rv style="--d:240ms"><img src="assets/img/oficina-04.webp" alt="Bancada de trabalho da oficina Consertaqui" loading="lazy" decoding="async"></figure>
     </div>
   </div>
 </section>
@@ -354,7 +354,7 @@
 <section class="sec sec--dark sobre" id="sobre">
   <div class="wrap sobre__in">
     <div class="sobre__foto" data-rv>
-      <img src="assets/img/mauricio.jpg" alt="Maurício, fundador da Consertaqui" loading="lazy">
+      <img src="assets/img/mauricio.webp" alt="Maurício, fundador da Consertaqui" loading="lazy" decoding="async">
     </div>
     <div class="sobre__txt" data-rv style="--d:100ms">
       <div class="eyebrow">Sobre o Maurício</div>
@@ -570,7 +570,7 @@
       </a>
     </div>
     <div class="cta__robo" data-rv style="--d:120ms">
-      <img src="assets/img/hero-mobile.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img src="assets/img/robo-cta.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -582,7 +582,7 @@
   <div class="wrap">
     <div class="foot__grid">
       <div>
-        <div class="foot__logo"><img src="assets/img/logo.png" alt="Consertaqui" width="180" height="34"></div>
+        <div class="foot__logo"><img src="assets/img/logo.webp" alt="Consertaqui" width="180" height="34"></div>
         <p>Conserto e manutenção de roçadeiras e ferramentas elétricas em Suzano e região.</p>
         <div class="foot__social">
           <a href="https://wa.me/5511940119097" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"/></svg></a>
@@ -606,7 +606,7 @@
       <div>
         <h4>Serviços</h4>
         <ul>
-          <li><a href="#servicos">Conserto de roçadeira</a></li>
+          <li><a href="conserto-de-rocadeira/">Conserto de roçadeira</a></li>
           <li><a href="conserto-de-compressor-de-ar/">Conserto de compressor de ar</a></li>
           <li><a href="conserto-de-martelete-e-furadeira/">Martelete e furadeira</a></li>
           <li><a href="ferramentas-eletricas/">Ferramentas elétricas</a></li>
@@ -653,7 +653,7 @@
   "alternateName": "Consertaqui - Conserto de Ferramentas Elétricas e Roçadeiras",
   "description": "Conserto e manutenção de roçadeiras e ferramentas elétricas em Suzano e região do Alto Tietê.",
   "url": "https://www.consertaquisuzano.com.br/",
-  "image": "https://www.consertaquisuzano.com.br/assets/img/hero-desktop.jpg",
+  "image": "https://www.consertaquisuzano.com.br/assets/img/hero-desktop.webp",
   "telephone": "+5511940119097",
   "priceRange": "$$",
   "address": {
