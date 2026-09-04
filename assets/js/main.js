@@ -10,6 +10,29 @@
     el.href = WA + '?text=' + encodeURIComponent(el.getAttribute('data-wa'));
   });
 
+  /* ---- conversao do Google Ads ------------------------------------
+     Um listener na captura pega os ~40 botoes de WhatsApp e o telefone
+     de uma vez. transport_type beacon e o que importa aqui: o clique
+     leva a pessoa pra fora do site, e sem beacon a requisicao morre no
+     meio da navegacao e a conversao se perde. */
+  var CONV_WA  = 'AW-17736470012/TCfACPy17u0cEPybtIlC';
+  var CONV_TEL = 'AW-17736470012/YUqtCP-17u0cEPybtIlC';
+
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest && ev.target.closest('a');
+    if (!a || typeof window.gtag !== 'function') return;
+
+    var alvo = null;
+    if (a.hasAttribute('data-wa') || a.href.indexOf('wa.me/') !== -1) alvo = CONV_WA;
+    else if (a.protocol === 'tel:') alvo = CONV_TEL;
+    if (!alvo) return;
+
+    window.gtag('event', 'conversion', {
+      send_to: alvo,
+      transport_type: 'beacon'
+    });
+  }, true);
+
   /* ---- header sticky ---------------------------------------------- */
   var head = document.getElementById('head');
   var waFloat = document.getElementById('waFloat');
