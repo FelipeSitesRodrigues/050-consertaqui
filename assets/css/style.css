@@ -176,6 +176,10 @@ h3 { font-size: 1.05rem; letter-spacing: -0.01em; }
 .btn--sm::before { box-shadow: 0 0 14px 1px rgba(var(--glow), 0.8); }
 .btn--block { width: 100%; justify-content: center; }
 
+/* Par de rotulos: o longo no desktop, o curto no card estreito de mobile.
+   Com 2 cards por linha o card fica com ~170px e "Combinar de levar" estoura. */
+.t-sm { display: none; }
+
 /* --------------------------------------------------------------- head --- */
 
 .head {

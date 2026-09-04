@@ -214,18 +214,34 @@
   .sols__fecho .btn { width: 100%; justify-content: center; }
   .secao__cta .btn { width: 100%; justify-content: center; }
   .volta__in { flex-direction: column; align-items: flex-start; }
-  .res__galeria { grid-template-columns: 1fr; }
-  .res__galeria img:first-child { grid-column: auto; }
+  .res__galeria img:first-child { grid-column: 1 / -1; }
 }
 
 @media (max-width: 620px) {
-  .dores__grid { grid-template-columns: 1fr; gap: 10px; }
-  .dor { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 18px 16px; }
-  .dor__ico { width: 26px; height: 26px; }
-  .dor b { flex: 1; min-width: 0; }
-  .dor p { flex: 0 0 100%; }
-  .dor__cta { flex: 0 0 100%; }
-  .sols__grid { grid-template-columns: 1fr; }
+  /* dois cards por linha, nao um. Um por linha obriga a rolar demais e a
+     pessoa desiste antes de chegar no CTA. Como o card cai pra ~170px, tudo
+     dentro dele encolhe junto e o rotulo do botao troca pela versao curta. */
+  .t-lg { display: none; }
+  .t-sm { display: inline; }
+
+  .dores__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .dor { padding: 16px 13px 14px; gap: 7px; }
+  .dor__ico { width: 25px; height: 25px; }
+  .dor b { font-size: 0.82rem; line-height: 1.18; }
+  .dor p { font-size: 11.6px; line-height: 1.45; }
+  .dor__cta { width: 100%; justify-content: center; padding: 9px 10px; font-size: 9.5px; letter-spacing: 0.05em; }
+  .dor__cta svg { width: 13px; height: 13px; }
+
+  .sols__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .sol { padding: 18px 14px 16px; gap: 8px; }
+  .sol__ico { width: 26px; height: 26px; }
+  .sol h3 { font-size: 0.82rem; line-height: 1.18; }
+  .sol p { font-size: 11.6px; line-height: 1.45; }
+  .sol__acoes { gap: 6px; }
+  .sol__acoes .btn { width: 100%; justify-content: center; padding: 9px 10px; font-size: 9.5px; letter-spacing: 0.05em; }
+  .sol__acoes .btn svg { width: 13px; height: 13px; }
+  /* o brilho de 14px em volta de um botao de 150px vira borrao */
+  .sol__acoes .btn--sm::before { box-shadow: 0 0 10px 1px rgba(var(--glow), 0.7); }
   .hero__nota { gap: 8px 16px; }
   .hero--lp .hero__art { margin-inline: -20px; }
   .marcas__cta { flex-direction: column; align-items: flex-start; }
