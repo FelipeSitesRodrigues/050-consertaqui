@@ -19,12 +19,10 @@
 <link rel="icon" href="../assets/img/logo.png">
 <link rel="apple-touch-icon" href="../assets/img/logo.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="preload" as="image" href="../assets/img/lps/compressor-hero.webp" type="image/webp" media="(min-width: 861px)" fetchpriority="high">
-<link rel="preload" as="image" href="../assets/img/lps/compressor-hero-mob.webp" type="image/webp" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="image" imagesrcset="../assets/img/lps/compressor-hero-800.webp 800w, ../assets/img/lps/compressor-hero.webp 1400w" imagesizes="(min-width: 1241px) calc(50vw + 48px), 54vw" type="image/webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="preload" as="image" imagesrcset="../assets/img/lps/compressor-hero-mob.webp 900w" imagesizes="100vw" type="image/webp" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="../assets/fonts/archivo-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../assets/fonts/inter-latin.woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/lp.css">
 
@@ -44,7 +42,7 @@
 <header class="head" id="head">
   <div class="wrap head__in">
     <a href="../" class="head__logo" aria-label="Consertaqui, página inicial">
-      <img src="../assets/img/logo.webp" alt="Consertaqui" width="160" height="30">
+      <img src="../assets/img/logo-v2.webp" alt="Consertaqui" width="102" height="30">
     </a>
 
     <nav class="nav" aria-label="Navegação principal">
@@ -117,8 +115,8 @@
 
     <div class="hero__art">
       <picture>
-        <source srcset="../assets/img/lps/compressor-hero-mob.webp" media="(max-width: 860px)" type="image/webp">
-        <img src="../assets/img/lps/compressor-hero.webp" alt="Compressor de ar amarelo quebrado, com a correia solta, na oficina da Consertaqui" width="1400" height="934" fetchpriority="high" decoding="async">
+        <source srcset="../assets/img/lps/compressor-hero-mob.webp 900w" sizes="100vw" media="(max-width: 860px)" type="image/webp">
+        <img src="../assets/img/lps/compressor-hero-800.webp" srcset="../assets/img/lps/compressor-hero-800.webp 800w, ../assets/img/lps/compressor-hero.webp 1400w" sizes="(min-width: 1241px) calc(50vw + 48px), 54vw" alt="Compressor de ar amarelo quebrado, com a correia solta, na oficina da Consertaqui" width="1400" height="934" fetchpriority="high" decoding="async">
       </picture>
     </div>
   </div>
@@ -252,7 +250,7 @@
 <section class="sec sec--dark res" id="resultado">
   <div class="wrap res__in">
     <figure class="res__foto" data-rv>
-        <img src="../assets/img/lps/compressor-pronto.webp" alt="Compressor de ar restaurado pela Consertaqui, testado e funcionando na oficina" width="1200" height="676" loading="lazy" decoding="async">
+        <img src="../assets/img/lps/compressor-pronto-700.webp" srcset="../assets/img/lps/compressor-pronto-700.webp 700w, ../assets/img/lps/compressor-pronto.webp 1200w" sizes="(min-width: 1101px) 643px, (min-width: 621px) calc(100vw - 48px), calc(100vw - 40px)" alt="Compressor de ar restaurado pela Consertaqui, testado e funcionando na oficina" width="700" height="394" loading="lazy" decoding="async">
       </figure>
     <div class="res__txt" data-rv style="--d:100ms">
       <div class="eyebrow">O resultado</div>
@@ -403,7 +401,7 @@
 <section class="sec sec--light sobre sobre--lp" id="sobre">
   <div class="wrap sobre__in">
     <div class="sobre__foto" data-rv>
-      <img src="../assets/img/mauricio.webp" alt="Maurício, fundador da Consertaqui, na oficina em Suzano" width="600" height="1066" loading="lazy" decoding="async">
+      <img src="../assets/img/mauricio-320.webp" srcset="../assets/img/mauricio-320.webp 320w, ../assets/img/mauricio.webp 600w" sizes="(max-width: 860px) calc(100vw - 40px), (max-width: 1100px) 260px, 300px" alt="Maurício, fundador da Consertaqui, na oficina em Suzano" width="320" height="569" loading="lazy" decoding="async">
     </div>
     <div class="sobre__txt" data-rv style="--d:100ms">
       <div class="eyebrow">Quem faz o serviço</div>
@@ -431,10 +429,10 @@
       <a class="btn btn--wa btn--sm" data-wa="Olá! Vim pelo site. Queria levar minha ferramenta na oficina. Qual o melhor horário?" href="https://wa.me/5511940119097"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i1"/></svg>Combinar de levar</a>
     </div>
     <div class="of__grid">
-      <figure data-rv><img src="../assets/img/oficina-01.webp" alt="Balcão de atendimento da Consertaqui em Suzano" width="600" height="338" loading="lazy" decoding="async"></figure>
-      <figure data-rv style="--d:80ms"><img src="../assets/img/oficina-02.webp" alt="Interior da loja Consertaqui com peças e acessórios" width="600" height="450" loading="lazy" decoding="async"></figure>
-      <figure data-rv style="--d:160ms"><img src="../assets/img/oficina-03.webp" alt="Área técnica da Consertaqui com prateleiras de peças" width="600" height="450" loading="lazy" decoding="async"></figure>
-      <figure data-rv style="--d:240ms"><img src="../assets/img/oficina-04.webp" alt="Bancada de trabalho da oficina Consertaqui" width="600" height="450" loading="lazy" decoding="async"></figure>
+      <figure data-rv><img src="../assets/img/oficina-01-320.webp" srcset="../assets/img/oficina-01-320.webp 320w, ../assets/img/oficina-01.webp 600w" sizes="(max-width: 620px) 78vw, (max-width: 1100px) 23vw, 208px" alt="Balcão de atendimento da Consertaqui em Suzano" width="320" height="180" loading="lazy" decoding="async"></figure>
+      <figure data-rv style="--d:80ms"><img src="../assets/img/oficina-02-320.webp" srcset="../assets/img/oficina-02-320.webp 320w, ../assets/img/oficina-02.webp 600w" sizes="(max-width: 620px) 78vw, (max-width: 1100px) 23vw, 208px" alt="Interior da loja Consertaqui com peças e acessórios" width="320" height="240" loading="lazy" decoding="async"></figure>
+      <figure data-rv style="--d:160ms"><img src="../assets/img/oficina-03-320.webp" srcset="../assets/img/oficina-03-320.webp 320w, ../assets/img/oficina-03.webp 600w" sizes="(max-width: 620px) 78vw, (max-width: 1100px) 23vw, 208px" alt="Área técnica da Consertaqui com prateleiras de peças" width="320" height="240" loading="lazy" decoding="async"></figure>
+      <figure data-rv style="--d:240ms"><img src="../assets/img/oficina-04-320.webp" srcset="../assets/img/oficina-04-320.webp 320w, ../assets/img/oficina-04.webp 600w" sizes="(max-width: 620px) 78vw, (max-width: 1100px) 23vw, 208px" alt="Bancada de trabalho da oficina Consertaqui" width="320" height="240" loading="lazy" decoding="async"></figure>
     </div>
   </div>
 </section>
@@ -442,7 +440,7 @@
 <!-- =================================================== DEPOIMENTOS ==== -->
 <section class="sec sec--white dep" id="depoimentos">
   <div class="wrap">
-    <h2 data-rv>4,4 no Google, e a gente faz questão de manter</h2>
+    <h2 data-rv>O que nossos clientes dizem</h2>
     <div class="dep__grid" id="depGrid">
       <article class="card-dep" data-rv style="--d:0ms">
         <div class="stars" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i3"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i3"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i3"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i3"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i3"/></svg></div>
@@ -490,6 +488,10 @@
           <span>R. Amélia Guerra, 669<br>Vila Amorim, Suzano - SP, 08610-000</span>
         </li>
         <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span>Segunda a sexta, das 8h às 17h<br>Sábado e domingo: fechado</span>
+        </li>
+        <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
           <span><a href="https://wa.me/5511940119097" data-wa="Olá! Vim pelo site. Meu compressor de ar está com problema e queria combinar de levar aí.">(11) 94011-9097</a> · <a href="tel:+551148531538">(11) 4853-1538</a></span>
         </li>
@@ -499,7 +501,7 @@
         </li>
       </ul>
       <div class="acoes">
-        <a class="btn btn--wa btn--pulso" data-wa="Olá! Vim pelo site. Queria confirmar o horário de funcionamento para levar minha ferramenta." href="https://wa.me/5511940119097"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i1"/></svg>Confirmar horário</a>
+        <a class="btn btn--wa btn--pulso" data-wa="Olá! Vim pelo site. Queria combinar o dia de levar minha ferramenta aí na oficina." href="https://wa.me/5511940119097"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i1"/></svg>Combinar de levar</a>
         <a class="btn btn--ghost" href="https://maps.google.com/?q=R.+Am%C3%A9lia+Guerra,+669,+Vila+Amorim,+Suzano+SP" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Como chegar</a>
       </div>
     </div>
@@ -605,7 +607,7 @@
       <a class="btn btn--luz btn--pulso" data-wa="Olá! Vim pelo site. Meu compressor de ar precisa de conserto e queria combinar de levar aí." href="https://wa.me/5511940119097"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i1"/></svg>Chamar no WhatsApp</a>
     </div>
     <div class="cta__robo" data-rv style="--d:120ms">
-      <img src="../assets/img/robo-cta.webp" alt="" width="640" height="960" aria-hidden="true" loading="lazy" decoding="async">
+      <img src="../assets/img/robo-cta-320.webp" srcset="../assets/img/robo-cta-320.webp 320w, ../assets/img/robo-cta.webp 640w" sizes="(max-width: 860px) 320px, 300px" alt="" width="320" height="480" aria-hidden="true" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -625,7 +627,7 @@
   <div class="wrap">
     <div class="foot__grid">
       <div>
-        <div class="foot__logo"><img src="../assets/img/logo.webp" alt="Consertaqui" width="180" height="34" loading="lazy"></div>
+        <div class="foot__logo"><img src="../assets/img/logo-v2.webp" alt="Consertaqui" width="116" height="34" loading="lazy"></div>
         <p>Conserto e manutenção de roçadeiras e ferramentas elétricas em Suzano e região.</p>
         <div class="foot__social">
           <a href="https://wa.me/5511940119097" data-wa="Olá! Vim pelo site. Meu compressor de ar está com problema e queria combinar de levar aí." aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i1"/></svg></a>
@@ -661,6 +663,7 @@
         <ul class="foot__contato">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg><a href="https://wa.me/5511940119097" data-wa="Olá! Vim pelo site. Meu compressor de ar está com problema e queria combinar de levar aí.">(11) 94011-9097</a></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>R. Amélia Guerra, 669<br>Vila Amorim, Suzano - SP<br>CEP 08610-000</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, das 8h às 17h<br>Sáb e dom: fechado</span></li>
         </ul>
       </div>
     </div>
@@ -698,7 +701,9 @@
       "postalCode": "08610-000",
       "addressCountry": "BR"
     },
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "11" }
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" }
+    ]
   },
   "areaServed": [
     { "@type": "City", "name": "Suzano" },

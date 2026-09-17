@@ -19,11 +19,10 @@
 <link rel="icon" href="assets/img/logo.png">
 <link rel="apple-touch-icon" href="assets/img/logo.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/img/hero-desktop.webp" type="image/webp" media="(min-width: 861px)" fetchpriority="high">
-<link rel="preload" as="image" href="assets/img/hero-mobile.webp" type="image/webp" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="image" imagesrcset="assets/img/hero-desktop-800.webp 800w, assets/img/hero-desktop.webp 1400w" imagesizes="(min-width: 1241px) calc(50vw + 48px), 54vw" type="image/webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="preload" as="image" imagesrcset="assets/img/hero-mobile-750.webp 750w, assets/img/hero-mobile.webp 900w" imagesizes="100vw" type="image/webp" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-latin.woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 
 <!-- Google tag (gtag.js) -->
@@ -42,7 +41,7 @@
 <header class="head" id="head">
   <div class="wrap head__in">
     <a href="#topo" class="head__logo" aria-label="Consertaqui, página inicial">
-      <img src="assets/img/logo.webp" alt="Consertaqui" width="160" height="30">
+      <img src="assets/img/logo-v2.webp" alt="Consertaqui" width="102" height="30">
     </a>
 
     <nav class="nav" aria-label="Navegação principal">
@@ -114,8 +113,8 @@
 
     <div class="hero__art">
       <picture>
-        <source srcset="assets/img/hero-mobile.webp" media="(max-width: 860px)" type="image/webp">
-        <img src="assets/img/hero-desktop.webp" alt="Mascote da Consertaqui com duas chaves de fenda em frente a loja em Suzano" width="1400" height="933" fetchpriority="high" decoding="async">
+        <source srcset="assets/img/hero-mobile-750.webp 750w, assets/img/hero-mobile.webp 900w" sizes="100vw" media="(max-width: 860px)" type="image/webp">
+        <img src="assets/img/hero-desktop-800.webp" srcset="assets/img/hero-desktop-800.webp 800w, assets/img/hero-desktop.webp 1400w" sizes="(min-width: 1241px) calc(50vw + 48px), 54vw" alt="Mascote da Consertaqui com duas chaves de fenda em frente a loja em Suzano" width="1400" height="933" fetchpriority="high" decoding="async">
       </picture>
     </div>
   </div>
@@ -193,7 +192,7 @@
 
     <div class="serv__grid">
       <article class="card-serv" data-rv>
-        <div class="card-serv__img"><img src="assets/img/serv-rocadeira.webp" alt="Conserto de roçadeira em Suzano" width="500" height="500" loading="lazy" decoding="async"></div>
+        <div class="card-serv__img"><img src="assets/img/serv-rocadeira-200.webp" srcset="assets/img/serv-rocadeira-200.webp 200w, assets/img/serv-rocadeira-300.webp 300w" sizes="100px" alt="Conserto de roçadeira em Suzano" width="200" height="200" loading="lazy" decoding="async"></div>
         <div class="card-serv__body">
           <h3>Roçadeiras</h3>
           <p>Conserto completo, carburadores, embreagem, bobina, ignição e mais.</p>
@@ -202,7 +201,7 @@
       </article>
 
       <article class="card-serv" data-rv style="--d:70ms">
-        <div class="card-serv__img"><img src="assets/img/serv-furadeira.webp" alt="Conserto de furadeira e martelete em Suzano" width="500" height="500" loading="lazy" decoding="async"></div>
+        <div class="card-serv__img"><img src="assets/img/serv-furadeira-200.webp" srcset="assets/img/serv-furadeira-200.webp 200w, assets/img/serv-furadeira-300.webp 300w" sizes="100px" alt="Conserto de furadeira e martelete em Suzano" width="200" height="200" loading="lazy" decoding="async"></div>
         <div class="card-serv__body">
           <h3>Furadeiras e marteletes</h3>
           <p>Reparo de motor, mandril, rolamentos, escovas, cabo e componentes.</p>
@@ -211,7 +210,7 @@
       </article>
 
       <article class="card-serv" data-rv style="--d:140ms">
-        <div class="card-serv__img"><img src="assets/img/serv-esmerilhadeira.webp" alt="Conserto de esmerilhadeira em Suzano" width="500" height="500" loading="lazy" decoding="async"></div>
+        <div class="card-serv__img"><img src="assets/img/serv-esmerilhadeira-200.webp" srcset="assets/img/serv-esmerilhadeira-200.webp 200w, assets/img/serv-esmerilhadeira-300.webp 300w" sizes="100px" alt="Conserto de esmerilhadeira em Suzano" width="200" height="200" loading="lazy" decoding="async"></div>
         <div class="card-serv__body">
           <h3>Esmerilhadeiras</h3>
           <p>Troca de induzido, engrenagens, rolamentos e manutenção geral.</p>
@@ -220,7 +219,7 @@
       </article>
 
       <article class="card-serv" data-rv style="--d:210ms">
-        <div class="card-serv__img"><img src="assets/img/serv-serra.webp" alt="Conserto de serra elétrica em Suzano" width="500" height="500" loading="lazy" decoding="async"></div>
+        <div class="card-serv__img"><img src="assets/img/serv-serra-200.webp" srcset="assets/img/serv-serra-200.webp 200w, assets/img/serv-serra-300.webp 300w" sizes="100px" alt="Conserto de serra elétrica em Suzano" width="200" height="200" loading="lazy" decoding="async"></div>
         <div class="card-serv__body">
           <h3>Serras elétricas</h3>
           <p>Ajustes, troca de escovas, rolamentos, cabos e peças de reposição.</p>
@@ -229,7 +228,7 @@
       </article>
 
       <article class="card-serv" data-rv style="--d:280ms">
-        <div class="card-serv__img"><img src="assets/img/serv-rompedor.webp" alt="Conserto de rompedor e outras ferramentas em Suzano" width="500" height="500" loading="lazy" decoding="async"></div>
+        <div class="card-serv__img"><img src="assets/img/serv-rompedor-200.webp" srcset="assets/img/serv-rompedor-200.webp 200w, assets/img/serv-rompedor-300.webp 300w" sizes="100px" alt="Conserto de rompedor e outras ferramentas em Suzano" width="200" height="200" loading="lazy" decoding="async"></div>
         <div class="card-serv__body">
           <h3>Rompedores e outros</h3>
           <p>Manutenção em diversas ferramentas elétricas e acessórios.</p>
@@ -248,12 +247,12 @@
       <b>Melhores marcas</b>
     </div>
     <div class="marcas__list" data-rv style="--d:80ms">
-      <img src="assets/img/marcas/stihl.webp" alt="Stihl" loading="lazy" decoding="async">
-      <img src="assets/img/marcas/bosch.webp" alt="Bosch" loading="lazy" decoding="async">
-      <img src="assets/img/marcas/makita.webp" alt="Makita" loading="lazy" decoding="async">
-      <img src="assets/img/marcas/dewalt.webp" alt="DeWalt" loading="lazy" decoding="async">
-      <img src="assets/img/marcas/black-decker.webp" alt="Black and Decker" loading="lazy" decoding="async">
-      <img src="assets/img/marcas/vonder.webp" alt="Vonder" loading="lazy" decoding="async">
+      <img src="assets/img/marcas/stihl-v2.webp" alt="Stihl" width="288" height="60" loading="lazy" decoding="async">
+      <img src="assets/img/marcas/bosch-v2.webp" alt="Bosch" width="268" height="60" loading="lazy" decoding="async">
+      <img src="assets/img/marcas/makita-v2.webp" alt="Makita" width="170" height="60" loading="lazy" decoding="async">
+      <img src="assets/img/marcas/dewalt-v2.webp" alt="DeWalt" width="158" height="60" loading="lazy" decoding="async">
+      <img src="assets/img/marcas/black-decker-v2.webp" alt="Black and Decker" width="116" height="60" loading="lazy" decoding="async">
+      <img src="assets/img/marcas/vonder-v2.webp" alt="Vonder" width="214" height="60" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -267,8 +266,8 @@
         <div class="eyebrow">Outras ferramentas</div>
         <h2>A gente <span class="g">também</span> conserta.</h2>
         <div class="outras__art">
-          <img src="assets/img/serv-rompedor.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-          <img src="assets/img/serv-furadeira.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+          <img src="assets/img/serv-rompedor-200.webp" srcset="assets/img/serv-rompedor-200.webp 200w, assets/img/serv-rompedor-300.webp 300w" sizes="88px" alt="" aria-hidden="true" width="200" height="200" loading="lazy" decoding="async">
+          <img src="assets/img/serv-furadeira-200.webp" srcset="assets/img/serv-furadeira-200.webp 200w, assets/img/serv-furadeira-300.webp 300w" sizes="88px" alt="" aria-hidden="true" width="200" height="200" loading="lazy" decoding="async">
         </div>
         <ul class="outras__list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>Aspiradores</li>
@@ -352,10 +351,10 @@
       <p>Ambiente preparado para oferecer o melhor serviço para sua ferramenta.</p>
     </div>
     <div class="of__grid">
-      <figure data-rv><img src="assets/img/oficina-01.webp" alt="Balcão de atendimento da Consertaqui em Suzano" loading="lazy" decoding="async"></figure>
-      <figure data-rv style="--d:80ms"><img src="assets/img/oficina-02.webp" alt="Interior da loja Consertaqui com peças e acessórios" loading="lazy" decoding="async"></figure>
-      <figure data-rv style="--d:160ms"><img src="assets/img/oficina-03.webp" alt="Área técnica da Consertaqui com prateleiras de peças" loading="lazy" decoding="async"></figure>
-      <figure data-rv style="--d:240ms"><img src="assets/img/oficina-04.webp" alt="Bancada de trabalho da oficina Consertaqui" loading="lazy" decoding="async"></figure>
+      <figure data-rv><img src="assets/img/oficina-01-320.webp" srcset="assets/img/oficina-01-320.webp 320w, assets/img/oficina-01.webp 600w" sizes="(max-width: 620px) 78vw, (max-width: 1100px) 23vw, 208px" alt="Balcão de atendimento da Consertaqui em Suzano" loading="lazy" decoding="async"></figure>
+      <figure data-rv style="--d:80ms"><img src="assets/img/oficina-02-320.webp" srcset="assets/img/oficina-02-320.webp 320w, assets/img/oficina-02.webp 600w" sizes="(max-width: 620px) 78vw, (max-width: 1100px) 23vw, 208px" alt="Interior da loja Consertaqui com peças e acessórios" loading="lazy" decoding="async"></figure>
+      <figure data-rv style="--d:160ms"><img src="assets/img/oficina-03-320.webp" srcset="assets/img/oficina-03-320.webp 320w, assets/img/oficina-03.webp 600w" sizes="(max-width: 620px) 78vw, (max-width: 1100px) 23vw, 208px" alt="Área técnica da Consertaqui com prateleiras de peças" loading="lazy" decoding="async"></figure>
+      <figure data-rv style="--d:240ms"><img src="assets/img/oficina-04-320.webp" srcset="assets/img/oficina-04-320.webp 320w, assets/img/oficina-04.webp 600w" sizes="(max-width: 620px) 78vw, (max-width: 1100px) 23vw, 208px" alt="Bancada de trabalho da oficina Consertaqui" loading="lazy" decoding="async"></figure>
     </div>
   </div>
 </section>
@@ -364,7 +363,7 @@
 <section class="sec sec--dark sobre" id="sobre">
   <div class="wrap sobre__in">
     <div class="sobre__foto" data-rv>
-      <img src="assets/img/mauricio.webp" alt="Maurício, fundador da Consertaqui" loading="lazy" decoding="async">
+      <img src="assets/img/mauricio-320.webp" srcset="assets/img/mauricio-320.webp 320w, assets/img/mauricio.webp 600w" sizes="(max-width: 860px) calc(100vw - 40px), (max-width: 1100px) 260px, 300px" alt="Maurício, fundador da Consertaqui" loading="lazy" decoding="async">
     </div>
     <div class="sobre__txt" data-rv style="--d:100ms">
       <div class="eyebrow">Sobre o Maurício</div>
@@ -463,6 +462,10 @@
           <span>R. Amélia Guerra, 669<br>Vila Amorim, Suzano - SP, 08610-000</span>
         </li>
         <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span>Segunda a sexta, das 8h às 17h<br>Sábado e domingo: fechado</span>
+        </li>
+        <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i5"/></svg>
           <span><a href="https://wa.me/5511940119097">(11) 94011-9097</a> · <a href="tel:+551148531538">(11) 4853-1538</a></span>
         </li>
@@ -471,7 +474,7 @@
           <span><a href="https://www.instagram.com/consertaquisuzano/" target="_blank" rel="noopener">@consertaquisuzano</a></span>
         </li>
       </ul>
-      <a class="btn btn--wa btn--pulso" data-wa="Olá! Queria confirmar o horário de funcionamento para levar minha ferramenta." href="https://wa.me/5511940119097">
+      <a class="btn btn--wa btn--pulso" data-wa="Olá! Vim pelo site e queria saber como chegar aí na oficina para levar minha ferramenta." href="https://wa.me/5511940119097">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i2"/></svg>
         Como chegar
       </a>
@@ -580,7 +583,7 @@
       </a>
     </div>
     <div class="cta__robo" data-rv style="--d:120ms">
-      <img src="assets/img/robo-cta.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img src="assets/img/robo-cta-320.webp" srcset="assets/img/robo-cta-320.webp 320w, assets/img/robo-cta.webp 640w" sizes="(max-width: 860px) 320px, 300px" alt="" aria-hidden="true" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -592,7 +595,7 @@
   <div class="wrap">
     <div class="foot__grid">
       <div>
-        <div class="foot__logo"><img src="assets/img/logo.webp" alt="Consertaqui" width="180" height="34"></div>
+        <div class="foot__logo"><img src="assets/img/logo-v2.webp" alt="Consertaqui" width="116" height="34" loading="lazy"></div>
         <p>Conserto e manutenção de roçadeiras e ferramentas elétricas em Suzano e região.</p>
         <div class="foot__social">
           <a href="https://wa.me/5511940119097" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"/></svg></a>
@@ -640,6 +643,10 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <span>R. Amélia Guerra, 669<br>Vila Amorim, Suzano - SP<br>CEP 08610-000</span>
           </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <span>Seg a sex, das 8h às 17h<br>Sáb e dom: fechado</span>
+          </li>
         </ul>
       </div>
     </div>
@@ -686,11 +693,14 @@
     "https://www.instagram.com/consertaquisuzano/",
     "https://www.tiktok.com/@consertaqui.suzano"
   ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.4",
-    "reviewCount": "11"
-  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Serviços",
